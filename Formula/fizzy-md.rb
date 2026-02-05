@@ -5,31 +5,31 @@
 class FizzyMd < Formula
   desc "Transparent Markdown→HTML wrapper for Fizzy CLI"
   homepage "https://github.com/zainfathoni/fizzy-md"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/zainfathoni/fizzy-md/releases/download/v0.1.0/fizzy-md_0.1.0_Darwin_x86_64.tar.gz"
-      sha256 "656bc35bb5359ddb841a1096b059576a3ce72723f5574b80887593eeda9b51ad"
+      url "https://github.com/zainfathoni/fizzy-md/releases/download/v0.1.1/fizzy-md_0.1.1_Darwin_x86_64.tar.gz"
+      sha256 "8331c06745317ab39c7723b4de2ca74088654fdcfa2650cbd264f8d801d62a6c"
     end
     on_arm do
-      url "https://github.com/zainfathoni/fizzy-md/releases/download/v0.1.0/fizzy-md_0.1.0_Darwin_arm64.tar.gz"
-      sha256 "617429cb8008e40c1d496401d6054dd350436af56c5a5c980d9e528c7205d6a7"
+      url "https://github.com/zainfathoni/fizzy-md/releases/download/v0.1.1/fizzy-md_0.1.1_Darwin_arm64.tar.gz"
+      sha256 "7d6cf063f0c95a3623b6d17943e0c38f55e685cd58ccb6c40d65504b26a7d013"
     end
   end
 
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/zainfathoni/fizzy-md/releases/download/v0.1.0/fizzy-md_0.1.0_Linux_x86_64.tar.gz"
-        sha256 "cd5fd493ae3a4390e173632a29778520d619fb9adf315e40b817373093efc5d6"
+        url "https://github.com/zainfathoni/fizzy-md/releases/download/v0.1.1/fizzy-md_0.1.1_Linux_x86_64.tar.gz"
+        sha256 "c13fa5db590cc5f84af2e612d248db1bb704a87692fb8b7afd9822611b6c370a"
       end
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/zainfathoni/fizzy-md/releases/download/v0.1.0/fizzy-md_0.1.0_Linux_arm64.tar.gz"
-        sha256 "556e159e8dd2932741b2ff3ed2cafc8b9336e5213194a7d32706a8c202780b45"
+        url "https://github.com/zainfathoni/fizzy-md/releases/download/v0.1.1/fizzy-md_0.1.1_Linux_arm64.tar.gz"
+        sha256 "103cdb8b6783fb97dda977a31a9e950bc6c9881dd6fd085216e1e4c55d2d62dd"
       end
     end
   end
