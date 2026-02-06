@@ -9,36 +9,42 @@ class FizzyMd < Formula
   license "MIT"
 
   on_macos do
-    on_intel do
+    if Hardware::CPU.intel?
       url "https://github.com/zainfathoni/fizzy-md/releases/download/v0.1.2/fizzy-md_0.1.2_Darwin_x86_64.tar.gz"
-      sha256 "6a3030b228195b65ccda81f6201c8574e87e78f9efc13b3e9fb7f45f6b43f056"
+      sha256 "602c201fc84dbc5674b268a5bd216cb1a59ac2eed689f85bf09daec9c9f88a77"
+
+      def install
+        bin.install "fizzy-md"
+      end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       url "https://github.com/zainfathoni/fizzy-md/releases/download/v0.1.2/fizzy-md_0.1.2_Darwin_arm64.tar.gz"
-      sha256 "6b1da3c77c70dab9d27cc63b5af4a4eef2a252bc37604b0fae48a8e6446ffded"
+      sha256 "7c49f54211b12f3944d2b27ffea64774b80590ae33c898050bb5728b7718200b"
+
+      def install
+        bin.install "fizzy-md"
+      end
     end
   end
 
   on_linux do
-    on_intel do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/zainfathoni/fizzy-md/releases/download/v0.1.2/fizzy-md_0.1.2_Linux_x86_64.tar.gz"
-        sha256 "408283a60e5241fabbced23ec54281b108966a81506d7b274ed1c98873d222ad"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/zainfathoni/fizzy-md/releases/download/v0.1.2/fizzy-md_0.1.2_Linux_x86_64.tar.gz"
+      sha256 "87892647526fd2f968950115bc52492a22015f1ab9883813f6e442bbd1712c29"
+      def install
+        bin.install "fizzy-md"
       end
     end
-    on_arm do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/zainfathoni/fizzy-md/releases/download/v0.1.2/fizzy-md_0.1.2_Linux_arm64.tar.gz"
-        sha256 "856e525359209bca7d958006bbcc7b3fd66bad98bbeef43625271e23e124ff01"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/zainfathoni/fizzy-md/releases/download/v0.1.2/fizzy-md_0.1.2_Linux_arm64.tar.gz"
+      sha256 "59da513c42197f28df373e53f924dd118e3cd6e2cb39f11b10667b5838c0812c"
+      def install
+        bin.install "fizzy-md"
       end
     end
-  end
-
-  def install
-    bin.install "fizzy-md"
   end
 
   test do
-    system "#{bin}/fizzy-md", "--version"
+    system "#{bin}/fizzy-md --version"
   end
 end
