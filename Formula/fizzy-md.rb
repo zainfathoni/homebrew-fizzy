@@ -5,21 +5,21 @@
 class FizzyMd < Formula
   desc "Transparent Markdown→HTML wrapper for Fizzy CLI"
   homepage "https://github.com/zainfathoni/fizzy-md"
-  version "0.1.2"
+  version "0.1.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/zainfathoni/fizzy-md/releases/download/v0.1.2/fizzy-md_0.1.2_Darwin_x86_64.tar.gz"
-      sha256 "602c201fc84dbc5674b268a5bd216cb1a59ac2eed689f85bf09daec9c9f88a77"
+      url "https://github.com/zainfathoni/fizzy-md/releases/download/v0.1.4/fizzy-md_0.1.4_Darwin_x86_64.tar.gz"
+      sha256 "fb74a0ffbd8556ed9cc272a7f1517d2b915beb8eb31668398224c14ea58101d3"
 
       def install
         bin.install "fizzy-md"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/zainfathoni/fizzy-md/releases/download/v0.1.2/fizzy-md_0.1.2_Darwin_arm64.tar.gz"
-      sha256 "7c49f54211b12f3944d2b27ffea64774b80590ae33c898050bb5728b7718200b"
+      url "https://github.com/zainfathoni/fizzy-md/releases/download/v0.1.4/fizzy-md_0.1.4_Darwin_arm64.tar.gz"
+      sha256 "bb7c324b10297d9568980c5fcaa0d99aba6d90d1789b0da6c6b7085ce76440e2"
 
       def install
         bin.install "fizzy-md"
@@ -29,15 +29,15 @@ class FizzyMd < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/zainfathoni/fizzy-md/releases/download/v0.1.2/fizzy-md_0.1.2_Linux_x86_64.tar.gz"
-      sha256 "87892647526fd2f968950115bc52492a22015f1ab9883813f6e442bbd1712c29"
+      url "https://github.com/zainfathoni/fizzy-md/releases/download/v0.1.4/fizzy-md_0.1.4_Linux_x86_64.tar.gz"
+      sha256 "8c1e0b8ceb779c61a1bd73fa467b901a371ab894a49f22e1ab201f894f4013e5"
       def install
         bin.install "fizzy-md"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/zainfathoni/fizzy-md/releases/download/v0.1.2/fizzy-md_0.1.2_Linux_arm64.tar.gz"
-      sha256 "59da513c42197f28df373e53f924dd118e3cd6e2cb39f11b10667b5838c0812c"
+      url "https://github.com/zainfathoni/fizzy-md/releases/download/v0.1.4/fizzy-md_0.1.4_Linux_arm64.tar.gz"
+      sha256 "aecfd2d28c28bd435a30ae7fcf515da89b5ce84aa20e4a2e4b59d115623ed328"
       def install
         bin.install "fizzy-md"
       end
